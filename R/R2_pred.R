@@ -55,7 +55,7 @@ R2_pred <- function(mppData.vs, y.vs, B.ts, Q.list, her) {
   R2.cr <- R2.cr/her
   
   data.pvs <- cbind(R2.cr, n.cr)
-  data.pvs <- data.pvs[complete.cases(data.pvs), ]
+  data.pvs <- data.pvs[complete.cases(data.pvs), , drop = FALSE]
   
   R2.av <- sum(data.pvs[, 1] * data.pvs[, 2])/sum(data.pvs[, 2])
   
